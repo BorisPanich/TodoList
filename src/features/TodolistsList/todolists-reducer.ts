@@ -14,10 +14,10 @@ export const todolistsReducer = (state: Array<TodolistDomainType> = initialState
             return state.map(tl => tl.id === action.id ? {...tl, title: action.title} : tl)
         case 'CHANGE-TODOLIST-FILTER':
             return state.map(tl => tl.id === action.id ? {...tl, filter: action.filter} : tl)
-        case 'TODOLISTS/CHANGE-TODOLIST-ENTITY-STATUS':
-            return state.map(tl => tl.id === action.id ? {...tl, entityStatus: action.entityStatus} : tl)
         case 'SET-TODOLISTS':
             return action.todolists.map(tl => ({...tl, filter: 'all', entityStatus: 'idle'}))
+        case 'TODOLISTS/CHANGE-TODOLIST-ENTITY-STATUS':
+            return state.map(tl => tl.id === action.id ? {...tl, entityStatus: action.entityStatus} : tl)
         default:
             return state
     }
@@ -37,7 +37,6 @@ export const changeTodolistFilterAC = (id: string, filter: FilterValuesType) => 
     filter
 } as const)
 export const setTodolistsAC = (todolists: Array<TodolistType>) => ({type: 'SET-TODOLISTS', todolists} as const)
-
 export const changeTodolistEntityStatusAC = (id: string, entityStatus: RequestStatusType) => ( {
     type: 'TODOLISTS/CHANGE-TODOLIST-ENTITY-STATUS',
     id,
@@ -66,7 +65,7 @@ export const removeTodolistTC = (todolistId: string) => {
                     dispatch(setAppStatusAC('succeeded'))
                 } else {
                     if (res.data.messages.length) {
-                        dispatch(setAppErrorAC('error'))
+                        dispatch(setAppErrorAC('ERROR'))
                     } else {
                         dispatch(setAppErrorAC('failed'))
                     }
