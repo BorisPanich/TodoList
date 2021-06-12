@@ -1,9 +1,9 @@
 import {
     AddTodolistActionType,
-    removeTodolistAC,
     RemoveTodolistActionType,
     SetTodolistsActionType,
     addTodolistAC,
+    removeTodolistAC,
     setTodolistsAC
 } from './todolists-reducer'
 import {
@@ -18,8 +18,7 @@ import {Dispatch} from 'redux'
 import {AppRootStateType} from '../../app/store'
 import {setAppErrorAC, SetAppErrorActionType, setAppStatusAC, SetAppStatusActionType} from '../../app/app-reducer'
 import {handleServerAppError, handleServerNetworkError} from '../../utils/error-utils'
-import {createSlice, PayloadAction} from "@reduxjs/toolkit";
-import {action} from "@storybook/addon-actions";
+import {createSlice, PayloadAction} from '@reduxjs/toolkit'
 
 const initialState: TasksStateType = {}
 
@@ -28,25 +27,25 @@ const slice = createSlice({
     initialState,
     reducers: {
         removeTaskAC(state, action: PayloadAction<{ taskId: string, todolistId: string }>) {
-            const task = state[action.payload.todolistId]
-            const index = task.findIndex(t => t.id === action.payload.taskId)
+            const tasks = state[action.payload.todolistId]
+            const index = tasks.findIndex(t => t.id === action.payload.taskId)
             if (index > -1) {
-                task.splice(index, 1)
+                tasks.splice(index, 1)
             }
         },
         addTaskAC(state, action: PayloadAction<{ task: TaskType }>) {
             state[action.payload.task.todoListId].unshift(action.payload.task)
         },
         updateTaskAC(state, action: PayloadAction<{ taskId: string, model: UpdateDomainTaskModelType, todolistId: string }>) {
-            const task = state[action.payload.todolistId]
-            const index = task.findIndex(t => t.id === action.payload.taskId)
+            const tasks = state[action.payload.todolistId]
+            const index = tasks.findIndex(t => t.id === action.payload.taskId)
             if (index > -1) {
-                task[index] = {...task[index], ...action.payload.model}
+                tasks[index] = {...tasks[index], ...action.payload.model}
             }
         },
         setTasksAC(state, action: PayloadAction<{ tasks: Array<TaskType>, todolistId: string }>) {
-            state[action.payload.todolistId] = action.payload.tasks;
-        },
+            state[action.payload.todolistId] = action.payload.tasks
+        }
     },
     extraReducers: (builder) => {
         builder.addCase(addTodolistAC, (state, action) => {
@@ -57,16 +56,16 @@ const slice = createSlice({
         });
         builder.addCase(setTodolistsAC, (state, action) => {
             action.payload.todolists.forEach((tl: any) => {
-                state[tl.id] = [];
+                state[tl.id] = []
             })
-        })
+        });
     }
 })
 
-export const tasksReducer = slice.reducer;
+export const tasksReducer = slice.reducer
 
 // actions
-export const {removeTaskAC, addTaskAC, updateTaskAC, setTasksAC} = slice.actions;
+export const {removeTaskAC, addTaskAC, updateTaskAC, setTasksAC} = slice.actions
 
 // thunks
 export const fetchTasksTC = (todolistId: string) => (dispatch: Dispatch) => {
@@ -95,7 +94,7 @@ export const addTaskTC = (title: string, todolistId: string) => (dispatch: Dispa
                 dispatch(action)
                 dispatch(setAppStatusAC({status: 'succeeded'}))
             } else {
-                handleServerAppError(res.data, dispatch);
+                handleServerAppError(res.data, dispatch)
             }
         })
         .catch((error) => {
@@ -128,11 +127,11 @@ export const updateTaskTC = (taskId: string, model: UpdateDomainTaskModelType, t
                     const action = updateTaskAC({taskId, model, todolistId})
                     dispatch(action)
                 } else {
-                    handleServerAppError(res.data, dispatch);
+                    handleServerAppError(res.data, dispatch)
                 }
             })
             .catch((error) => {
-                handleServerNetworkError(error, dispatch);
+                handleServerNetworkError(error, dispatch)
             })
     }
 
@@ -148,3 +147,4 @@ export type UpdateDomainTaskModelType = {
 export type TasksStateType = {
     [key: string]: Array<TaskType>
 }
+
