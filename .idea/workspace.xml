@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="33d0ac03-a966-411c-8794-20ad29589312" name="Default Changelist" comment="18. tests refactoring (start) and Redux Toolkit">
+    <list default="true" id="33d0ac03-a966-411c-8794-20ad29589312" name="Default Changelist" comment="18. tests refactoring">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/TodolistsList/tasks-reducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/TodolistsList/tasks-reducer.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/store.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -123,7 +125,8 @@
       <option name="presentableId" value="Default" />
       <updated>1623470075236</updated>
       <workItem from="1623470086889" duration="194000" />
-      <workItem from="1623470324084" duration="3446000" />
+      <workItem from="1623470324084" duration="3842000" />
+      <workItem from="1623553831022" duration="2675000" />
     </task>
     <task id="LOCAL-00001" summary="18. tests refactoring (start) and Redux Toolkit">
       <created>1623471672148</created>
@@ -132,7 +135,14 @@
       <option name="project" value="LOCAL" />
       <updated>1623471672148</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="18. tests refactoring">
+      <created>1623474021286</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1623474021286</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -152,6 +162,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="18. tests refactoring (start) and Redux Toolkit" />
-    <option name="LAST_COMMIT_MESSAGE" value="18. tests refactoring (start) and Redux Toolkit" />
+    <MESSAGE value="18. tests refactoring" />
+    <option name="LAST_COMMIT_MESSAGE" value="18. tests refactoring" />
   </component>
 </project>
