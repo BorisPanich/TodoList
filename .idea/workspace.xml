@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="33d0ac03-a966-411c-8794-20ad29589312" name="Default Changelist" comment="18. tests refactoring">
+    <list default="true" id="33d0ac03-a966-411c-8794-20ad29589312" name="Default Changelist" comment="18. all fixed">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/store.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,19 +54,6 @@
       </test-names>
       <method v="2" />
     </configuration>
-    <configuration name="new array should be added when new todolist is added" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
-      <node-interpreter value="project" />
-      <node-options value="" />
-      <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
-      <working-dir value="$PROJECT_DIR$" />
-      <envs />
-      <scope-kind value="TEST" />
-      <test-file value="$PROJECT_DIR$/src/features/TodolistsList/tasks-reducer.test.ts" />
-      <test-names>
-        <test-name value="new array should be added when new todolist is added" />
-      </test-names>
-      <method v="2" />
-    </configuration>
     <configuration name="propertry with todolistId should be deleted" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <node-options value="" />
@@ -96,6 +80,16 @@
       </test-names>
       <method v="2" />
     </configuration>
+    <configuration name="start" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
     <configuration name="test" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -108,11 +102,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="npm.test" />
+        <item itemvalue="npm.start" />
         <item itemvalue="Jest.tasks should be added for todolist" />
+        <item itemvalue="npm.test" />
         <item itemvalue="Jest.empty arrays should be added when we set todolists" />
         <item itemvalue="Jest.propertry with todolistId should be deleted" />
-        <item itemvalue="Jest.new array should be added when new todolist is added" />
       </list>
     </recent_temporary>
   </component>
@@ -126,7 +120,9 @@
       <updated>1623470075236</updated>
       <workItem from="1623470086889" duration="194000" />
       <workItem from="1623470324084" duration="3842000" />
-      <workItem from="1623553831022" duration="2675000" />
+      <workItem from="1623553831022" duration="3340000" />
+      <workItem from="1624068448735" duration="2309000" />
+      <workItem from="1624300059279" duration="283000" />
     </task>
     <task id="LOCAL-00001" summary="18. tests refactoring (start) and Redux Toolkit">
       <created>1623471672148</created>
@@ -142,7 +138,14 @@
       <option name="project" value="LOCAL" />
       <updated>1623474021286</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="18. all fixed">
+      <created>1623558011995</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1623558011995</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -163,6 +166,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="18. tests refactoring (start) and Redux Toolkit" />
     <MESSAGE value="18. tests refactoring" />
-    <option name="LAST_COMMIT_MESSAGE" value="18. tests refactoring" />
+    <MESSAGE value="18. all fixed" />
+    <option name="LAST_COMMIT_MESSAGE" value="18. all fixed" />
   </component>
 </project>
