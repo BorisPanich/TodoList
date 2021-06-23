@@ -1,8 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="33d0ac03-a966-411c-8794-20ad29589312" name="Default Changelist" comment="18. all fixed">
+    <list default="true" id="33d0ac03-a966-411c-8794-20ad29589312" name="Default Changelist" comment="19. continuation Redux Toolkit and createAsyncThunk (start)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/todolists-api.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/todolists-api.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/store.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/Login/Login.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/Login/Login.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/TodolistsList/TodolistsList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/TodolistsList/TodolistsList.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/TodolistsList/tasks-reducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/TodolistsList/tasks-reducer.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,7 +35,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="js.last.introduce.type" value="CONST" />
+    <property name="js.last.introduce.type" value="LET" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -40,7 +45,7 @@
     <property name="ts.external.directory.path" value="D:\boris\programming\it-incubator\TodoList\node_modules\typescript\lib" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
-  <component name="RunManager" selected="Jest.tasks should be added for todolist">
+  <component name="RunManager" selected="npm.start">
     <configuration name="empty arrays should be added when we set todolists" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <node-options value="" />
@@ -122,7 +127,10 @@
       <workItem from="1623470324084" duration="3842000" />
       <workItem from="1623553831022" duration="3340000" />
       <workItem from="1624068448735" duration="2309000" />
-      <workItem from="1624300059279" duration="283000" />
+      <workItem from="1624300059279" duration="841000" />
+      <workItem from="1624327627111" duration="6018000" />
+      <workItem from="1624414464816" duration="5104000" />
+      <workItem from="1624471174121" duration="3091000" />
     </task>
     <task id="LOCAL-00001" summary="18. tests refactoring (start) and Redux Toolkit">
       <created>1623471672148</created>
@@ -145,7 +153,14 @@
       <option name="project" value="LOCAL" />
       <updated>1623558011995</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="19. continuation Redux Toolkit and createAsyncThunk (start)">
+      <created>1624300477729</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1624300477729</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -167,6 +182,7 @@
     <MESSAGE value="18. tests refactoring (start) and Redux Toolkit" />
     <MESSAGE value="18. tests refactoring" />
     <MESSAGE value="18. all fixed" />
-    <option name="LAST_COMMIT_MESSAGE" value="18. all fixed" />
+    <MESSAGE value="19. continuation Redux Toolkit and createAsyncThunk (start)" />
+    <option name="LAST_COMMIT_MESSAGE" value="19. continuation Redux Toolkit and createAsyncThunk (start)" />
   </component>
 </project>
