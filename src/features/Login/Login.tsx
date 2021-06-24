@@ -37,7 +37,7 @@ export const Login = () => {
             rememberMe: false
         },
         onSubmit: async (values: FormikValuesType, formikHelpers: FormikHelpers<FormikValuesType>) => {
-            const res = await dispatch(loginTC(values));
+            const action = await dispatch(loginTC(values));
             if (loginTC.rejected.match(action)) {
                 if (action.payload?.fieldsErrors?.length) {
                     const error = action.payload?.fieldsErrors[0]
