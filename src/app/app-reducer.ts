@@ -4,12 +4,12 @@ import {createAsyncThunk, createSlice, PayloadAction} from '@reduxjs/toolkit'
 
 export const initializeAppTC = createAsyncThunk('app/initializeApp', async (param, {dispatch}) => {
     const res = await authAPI.me()
-        if (res.data.resultCode === 0) {
-            dispatch(setIsLoggedInAC({value: true}))
-        } else {
+    if (res.data.resultCode === 0) {
+        dispatch(setIsLoggedInAC({value: true}))
+    } else {
 
-        }
-        return;
+    }
+    return;
 })
 
 const slice = createSlice({
