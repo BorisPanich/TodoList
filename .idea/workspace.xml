@@ -1,13 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="33d0ac03-a966-411c-8794-20ad29589312" name="Default Changelist" comment="19. createAsyncThunk: refactoring app-reducer, tasks-reducer (addTaskTC)">
+    <list default="true" id="33d0ac03-a966-411c-8794-20ad29589312" name="Default Changelist" comment="19. createAsyncThunk: refactoring all Thunk">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api/todolists-api.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/todolists-api.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app-reducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-reducer.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/TodolistsList/TodolistsList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/TodolistsList/TodolistsList.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/TodolistsList/tasks-reducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/TodolistsList/tasks-reducer.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/TodolistsList/todolists-reducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/TodolistsList/todolists-reducer.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -133,7 +128,7 @@
       <workItem from="1624471174121" duration="3359000" />
       <workItem from="1624501616879" duration="5191000" />
       <workItem from="1624555383487" duration="5348000" />
-      <workItem from="1624586972025" duration="5358000" />
+      <workItem from="1624586972025" duration="6442000" />
     </task>
     <task id="LOCAL-00001" summary="18. tests refactoring (start) and Redux Toolkit">
       <created>1623471672148</created>
@@ -177,7 +172,14 @@
       <option name="project" value="LOCAL" />
       <updated>1624507135201</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="19. createAsyncThunk: refactoring all Thunk">
+      <created>1624592854571</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1624592854571</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -202,6 +204,7 @@
     <MESSAGE value="19. continuation Redux Toolkit and createAsyncThunk (start)" />
     <MESSAGE value="19. createAsyncThunk for loginTC" />
     <MESSAGE value="19. createAsyncThunk: refactoring app-reducer, tasks-reducer (addTaskTC)" />
-    <option name="LAST_COMMIT_MESSAGE" value="19. createAsyncThunk: refactoring app-reducer, tasks-reducer (addTaskTC)" />
+    <MESSAGE value="19. createAsyncThunk: refactoring all Thunk" />
+    <option name="LAST_COMMIT_MESSAGE" value="19. createAsyncThunk: refactoring all Thunk" />
   </component>
 </project>
