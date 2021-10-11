@@ -2,21 +2,23 @@ import React from 'react'
 import {Button, Checkbox, FormControl, FormControlLabel, FormGroup, FormLabel, Grid, TextField} from '@material-ui/core'
 import {FormikHelpers, useFormik} from 'formik'
 import {useSelector} from 'react-redux'
-import {loginTC} from './auth-reducer'
-import {AppRootStateType, useAppDispatch} from '../../app/store'
+import {login} from './auth-reducer'
 import {Redirect} from 'react-router-dom'
-import {action} from "@storybook/addon-actions";
+import {selectIsLoggedIn} from './selectors'
+import {authActions} from './index'
+import {Action} from 'redux'
+import {useActions, useAppDispatch} from '../../utils/redux-utils'
 
-type FormikValuesType = {
+type FormValuesType = {
     email: string
     password: string
     rememberMe: boolean
 }
 
 export const Login = () => {
-    const dispatch = useAppDispatch();
+    const dispatch = useAppDispatch()
 
-    const isLoggedIn = useSelector<AppRootStateType, boolean>(state => state.auth.isLoggedIn);
+    const isLoggedIn = useSelector(selectIsLoggedIn);
 
     const formik = useFormik({
         validate: (values) => {
@@ -30,27 +32,27 @@ export const Login = () => {
                     password: 'Password is required'
                 }
             }
+
         },
         initialValues: {
             email: '',
             password: '',
             rememberMe: false
         },
-        onSubmit: async (values: FormikValuesType, formikHelpers: FormikHelpers<FormikValuesType>) => {
-            const action = await dispatch(loginTC(values));
-            if (loginTC.rejected.match(action)) {
-                if (action.payload?.fieldsErrors?.length) {
-                    const error = action.payload?.fieldsErrors[0]
-                    formikHelpers.setFieldError(error.field, error.error)
+        onSubmit: async (values: FormValuesType, formikHelpers: FormikHelpers<FormValuesType>) => {
+            const resultAction = await dispatch(authActions.login(values));
+
+            if  (login.rejected.match(resultAction)) {
+                if (resultAction.payload?.fieldsErrors?.length) {
+                    const error = resultAction.payload?.fieldsErrors[0];
+                    formikHelpers.setFieldError(error.field, error.error);
                 }
             }
-
-
         },
     })
 
     if (isLoggedIn) {
-        return <Redirect to={"/"}/>
+        return <Redirect to={"/"} />
     }
 
 
